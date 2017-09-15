@@ -1,10 +1,11 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const PORT = process.env.port || 3000;
 
 var app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.listen(PORT, function() {
+  console.log(`listening on port ${3000}!`);
 });
